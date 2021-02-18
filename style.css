@@ -2,9 +2,25 @@
     box-sizing: border-box;
 }
 
+body, html{
+    margin: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+}
+
+
+
 nav{
 display: flex;
 justify-content: space-between;
+}
+
+p {
+    padding-left: 15px;
 }
 
 .nav-left, .nav-right{
@@ -15,9 +31,10 @@ justify-content: space-between;
 
 ul > li {
     margin-left: 15px;
+    margin-right: 15px;
 }
 
-ul > li > a {
+.nav-left > li > a, .nav-right > li > a {
     color: black;
     text-decoration: none;
 }
@@ -26,16 +43,88 @@ a:hover {
     text-decoration: underline;
 }
 
+main{
+    position: relative;
+}
+
 .logo {
+    position: relative;
+    top: -140px;
     display: block;
     margin: auto;
 }
 
 .search-bar{
+    position: relative;
+    top: -110px;
     display: flex;
     justify-content: center;
 }
 
-.buttons{
+input[type="text"]{
+    width: 42%;
+    border-radius: 50px;
+    height: 45px;
+    border: 1px solid #c2c2c2;
+    outline: none;
+    padding: 15px;
+}
+
+.button{
+    position: relative;
+    top: -90px;
     display: flex;
+    justify-content: center;
+}
+
+button{
+    background-color: #f8f9fa;
+    border: 1px solid #f8f9fa;
+    border-radius: 4px;
+    cursor: pointer;
+    height: 36px;
+    padding: 0px 16px 0px 16px;
+    margin: 11px 4px 11px 4px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+button:hover{
+    border: 1px solid #c2c2c2;
+    border-bottom: 2px solid #c2c2c2;
+}
+
+
+.country{
+    list-style: none;
+    background-color: #f2f2f2;
+    border-bottom: 1px solid #dadce0;
+}
+
+.footer, .footer-left, .footer-right, .footer-center, .country{
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    background-color: #f2f2f2;
+}
+
+ul{
+    list-style: none;
+    padding-left: 0px;
+}
+
+.country > ul > li > a, .footer-left > li > a, .footer-right > li > a, .footer-center > li > a{
+    color: #646363;
+    text-decoration: none;
+}
+
+.country > ul > li > a:hover, .footer-left > li > a:hover, .footer-right > li > a:hover, .footer-center > li > a:hover{
+    text-decoration: underline;
+} /* add classes to all a tags to shorten code */
+
+li {
+    position: relative;
+}
+
+.carbon{
+    right: 55px;
 }
